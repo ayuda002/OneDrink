@@ -5,6 +5,7 @@ import {
   Accordion,
   AccordionHeader,
   AccordionBody,
+  Button
 } from "@material-tailwind/react";
 import { Card } from "flowbite-react";
 
@@ -14,6 +15,7 @@ import Modal from "./modal";
 
 type Props = {
   type: string;
+  url:string;
   alcohol: AlcoholData[];
 };
 
@@ -36,8 +38,6 @@ type Alcohol = Alcohol_Detail
 const Accordion_Menu: React.FC<Props> = (props) => {
   const [open, setOpen] = useState(0);
 
-  const [osake,setOsake] = useState({})
-
   const handleOpen = (value: any) => {
     setOpen(open === value ? 0 : value);
   };
@@ -47,20 +47,17 @@ const Accordion_Menu: React.FC<Props> = (props) => {
     unmount: { scale: 0.9 },
   };
 
-  // useEffect(()=>{
-  //   Alcohol.map((item)=>{
-  //     if(item.name === props.type){
-  //       setOsake(item);
-  //     }
-  //   })
-  // },[])
-
-  // console.log(osake)
+  const Detail_Page =()=>{
+    if(props.url !== "/"){
+      return <a href={props.url}><Button>詳細</Button></a>
+    }
+  }
 
   return (
     <Card>
-      <div className="flex flex-row justify-between">
-      <h5 className="mb-4 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{props.type}</h5>
+      <div className="flex flex-row justify-between mb-4">
+      <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{props.type}</h5>
+      {Detail_Page()}
       </div>
       <Fragment>
         <div className="flex flex-col">
