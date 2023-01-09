@@ -52,9 +52,9 @@ export default function Jin_Des(){
     </Card>
     <div className='grid grid-cols-1 lg:grid-cols-4 my-10 my-5'>
     {Jin.map((item)=>(
-       <Card className="mx-2">
+       <Card key={item.name} className="mx-2">
        <div className="mx-auto relative">
-       <a className="m-auto" href={item.image_url} target="_blank">
+       <a className="m-auto" href={item.image_url}>
          <img src={item.image_url2} /></a>
          <img src={item.image_url3} width="1" height="1" alt=""/>
        </div>

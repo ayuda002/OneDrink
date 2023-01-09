@@ -1,11 +1,13 @@
 import { Html, Head, Main, NextScript } from "next/document";
 import { GA_TRACKING_ID } from "../lib/gtag";
+import Script from "next/script";
 
 export default function Document() {
   return (
     <Html lang="en">
       <Head>
-      <script
+      <Script
+      id="my-script"
           dangerouslySetInnerHTML={{
             __html: `
             amzn_assoc_ad_type = "link_enhancement_widget"; amzn_assoc_tracking_id
@@ -21,11 +23,13 @@ export default function Document() {
           "749830446321faa9fac972fc15b942d7"; amzn_assoc_placement = "";
           amzn_assoc_marketplace = "amazon"; amzn_assoc_region = "JP";
         </script> */}
-        <script
+        <Script
+          id="my-script"
           async
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
         />
-        <script
+        <Script
+        id="my-script"
           dangerouslySetInnerHTML={{
             __html: `
             window.dataLayer = window.dataLayer || [];
@@ -37,7 +41,7 @@ export default function Document() {
           `,
           }}
         />
-        <script src="//ws-fe.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&Operation=GetScript&ID=OneJS&WS=1&MarketPlace=JP"></script>
+        <Script id="my-script" src="//ws-fe.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&Operation=GetScript&ID=OneJS&WS=1&MarketPlace=JP"></Script>
       </Head>
       <body>
         <Main />
