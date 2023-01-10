@@ -36,7 +36,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>お酒一覧表</title>
+        <title>お酒一覧表|お酒の種類を一覧表でわかりやすく表示!!</title>
         <meta name="description" content="お酒初心者の方向けに各お酒の度数と原材料を一覧で表示しました。一部のお酒には豆知識が書いてあります。" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />

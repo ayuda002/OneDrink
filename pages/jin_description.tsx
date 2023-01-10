@@ -27,8 +27,8 @@ export default function Jin_Des(){
     return(
      <div className="m-5">
       <Head>
-        <title>お酒一覧表：ジン</title>
-        <meta name="description" content="お酒初心者の方向けに各お酒の度数と原材料を一覧で表示しました。一部のお酒には豆知識が書いてあります。" />
+        <title>「ジン」の原料は何？初心者におすすめの銘柄紹介！</title>
+        <meta name="description" content="「ジン」ってどんなお酒？原料は？初心者に飲みやすい銘柄は何？" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -55,8 +55,8 @@ export default function Jin_Des(){
        <Card key={item.name} className="mx-2">
        <div className="mx-auto relative">
        <a className="m-auto" href={item.image_url}>
-         <img src={item.image_url2} /></a>
-         <img src={item.image_url3} width="1" height="1" alt=""/>
+         <img src={item.image_url2} alt="amazon_image"/></a>
+         <img src={item.image_url3} width="1" height="1" alt="amazon_image"/>
        </div>
        <div className="text-center mt-4">
        <Typography variant="h5" className="mb-2">
