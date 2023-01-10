@@ -35,7 +35,7 @@ export default function Jin_Des(){
     <div className='mx-5 my-5'>
     <Header />
     </div>
-    <Card className="w-100">
+    <Card className="w-100" color="blue">
       <CardBody className="text-center">
         <Typography variant="h5" className="mb-2">
         ジンとは?
@@ -44,15 +44,15 @@ export default function Jin_Des(){
         大麦、ライ麦、ジャガイモなどを原料とした蒸留酒。蒸留酒の中では比較的、個性が強くない上、西ヨーロッパでは古くから知られているため、そのまま飲むだけでなく、カクテルの材料として最も多く使われているものの一つである。
         </Typography>
       </CardBody>
-      <CardFooter divider className="flex items-center justify-between py-3">
-        <Typography variant="small" color="gray" className="flex gap-1">
+      <CardFooter divider className="flex items-center justify-between py-3 ">
+        <Typography variant="small" color="gray" className="flex gap-1 text-white">
          参照：<a href="https://ja.wikipedia.org/wiki/%E3%82%B8%E3%83%B3_(%E8%92%B8%E7%95%99%E9%85%92)">ウィキペディア</a>
         </Typography>
       </CardFooter>
     </Card>
-    <div className='grid grid-cols-1 lg:grid-cols-4 my-10 my-5'>
+    <div className='grid grid-cols-1 lg:grid-cols-4 my-5'>
     {Jin.map((item)=>(
-       <Card key={item.name} className="mx-2">
+       <Card key={item.name} className="mx-2 my-5">
        <div className="mx-auto relative">
        <a className="m-auto" href={item.image_url}>
          <img src={item.image_url2} alt="amazon_image"/></a>
